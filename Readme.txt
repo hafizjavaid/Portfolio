@@ -1,6 +1,9 @@
-Thanks for downloading this template!
+This is my portfolio website to show my skills
+and latest project to my clients and other people who want to know about me
 
-Template Name: Multi
-Template URL: https://bootstrapmade.com/multi-responsive-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Tech Stack
+
+#html
+#css
+#javascript
+#bootstrap
