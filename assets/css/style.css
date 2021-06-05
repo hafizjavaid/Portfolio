@@ -75,6 +75,9 @@ a:hover {
   z-index: 9999;
   overflow: hidden;
   background: #fff;
+  max-height: 100vh;
+  height: 100vh;
+  overflow-y: hidden !important;
 }
 
 #preloader:before {
@@ -106,6 +109,55 @@ a:hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background-color: #fff;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.page-loader-inner {
+  display: flex;
+  align-items: center;
+}
+
+.page-loader.slide-right {
+  transform: translateX(100%);
+  transition: .6s ease .4;
+}
+
+.page-loader.slide-right .page-loader-inner {
+  transition: opacity .4s ease;
+  opacity: 0;
+}
+
+.page-loader .circle {
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--primary-color);
+  border-right-color: transparent;
+  border-radius: 50%;
+  margin-right: 15px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
   }
 }
 .p15 {
